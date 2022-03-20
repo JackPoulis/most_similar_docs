@@ -6,8 +6,19 @@ import os
 import glob
 
 
-# Function that takes two files A,B and returns cos(A,B) of their vectors
 def similarity(filename_a, filename_b):
+    """Function that takes two files A,B and returns the cosine similarity of their vectors
+    https://en.wikipedia.org/wiki/Cosine_similarity
+
+    :param filename_a: Path of file A
+    :type filename_a: str
+    :param filename_b: Path of file B
+    :type filename_b: str
+    :return: The similarity of the 2 files that ranges from 0 to 1 with value 1
+    if files are identical
+    :rtype: float
+    """   
+     
     # Opening files using utf-8 encoding to recognize unicode characters
     file_a = codecs.open(filename_a, "r", encoding='utf-8')
     file_b = codecs.open(filename_b, "r", encoding='utf-8')
